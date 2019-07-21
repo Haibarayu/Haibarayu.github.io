@@ -49,7 +49,7 @@
                 <span class="nav-text">宇宙</span>
             </a>
         
-            <a class="nav-item active" href="/tags">
+            <a class="nav-item" href="/tags">
                 <span class="nav-text">标签</span>
             </a>
         
@@ -69,6 +69,8 @@
     <div id="aside-inner" class="aside-inner">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
 
+        
+        
         
         
 
@@ -126,34 +128,16 @@
 
 </header>
 
-        <div id="content" class="content"><article class="article" itemscope itemprop="blogPost">
-    
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            标签
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="http://yoursite.com/tags/index.html">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2019-07-21T02:46:24.724Z" itemprop="datePublished">2019-07-21</time>
-</a>
-
-            
-
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        
-        
-    </section>
-</article>
-
+        <div id="content" class="content">
+<section class="tags-wrap">
+  <h1 class="page-hd">
+    Tags
+    <small>(1)</small>
+  </h1>
+  <div class="tags">
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/文段/">文段</a><span class="tag-list-count">1</span></li></ul>
+  </div>
+</section>
 </div>
         <footer class="footer">
   <span>Copyright ©2019 Haibarayu</span>
@@ -215,6 +199,11 @@
         }
     });
     </script>
+    
+        <script type="text/javascript" src="/js/scrollspy.min.js"></script>
+        <script type="text/javascript">
+        $(document.body).scrollspy({target: '#aside-inner'});
+        </script>
     
 
 </body>
