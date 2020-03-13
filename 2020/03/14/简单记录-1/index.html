@@ -7,11 +7,11 @@
 
     
 
-    <title>标签 | Haibarayu&#39;s Blog</title>
+    <title>简单记录(1) | Haibarayu&#39;s Blog</title>
     <meta name="author" content="Wu Yu">
     <meta name="version" content="1.0.0">
     <meta name="keywords" content>
-    <meta name="description" content>
+    <meta name="description" content="牛客“程序发生段错误，可能是数组越界，堆栈溢出（如递归调用层数太多）”错误的可能原因开辟数组空间过大。今天在做一道并不难的题时，出现上述提示，可怎么也找不出问题，程序并未使用递归，数组也没有越界，在本地运行时也没有报错，实则困扰了我很久。后来把原先使用的 char 类型的字符数组改为 string 类型的字符串后解决了该问题。看有大佬说是牛客网无法处理数组索引值较大时的赋值操作，我当时是使用了char s[1000]这样的操作，发生段错误。size() 和 sizeof() 在 st...">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 
@@ -49,7 +49,7 @@
                 <span class="nav-text">宇宙</span>
             </a>
         
-            <a class="nav-item active" href="/tags">
+            <a class="nav-item" href="/tags">
                 <span class="nav-text">标签</span>
             </a>
         
@@ -69,6 +69,8 @@
     <div id="aside-inner" class="aside-inner">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
 
+        
+        
         
         
 
@@ -126,16 +128,68 @@
 
 </header>
 
-        <div id="content" class="content">
-<section class="tags-wrap">
-  <h1 class="page-hd">
-    Tags
-    <small>(5)</small>
-  </h1>
-  <div class="tags">
-    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/NLP/">NLP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note/">Note</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/剧评/">剧评</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/如果来生系列/">如果来生系列</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文段/">文段</a><span class="tag-list-count">2</span></li></ul>
-  </div>
-</section>
+        <div id="content" class="content"><article class="article" itemscope itemprop="blogPost">
+    
+    <header class="article-header">
+        
+        <h1 itemprop="name">
+            简单记录(1)
+        </h1>
+        
+        <div class="article-meta clearfix">
+            <a class="article-date" href="http://yoursite.com/2020/03/14/简单记录-1/index.html">
+    
+    <i class="icon-calendar"></i>
+    
+    <time datetime="2020-03-13T16:10:04.000Z" itemprop="datePublished">2020-03-14</time>
+</a>
+
+            
+<div class="article-tag-list">
+    <i class="icon-tag"></i>
+    <a class="article-tag-link" href="/tags/Note/">Note</a>
+</div>
+
+
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
+        
+        <ul>
+<li><p>牛客“程序发生段错误，可能是数组越界，堆栈溢出（如递归调用层数太多）”错误的可能原因<br><strong>开辟数组空间过大。</strong><br>今天在做一道并不难的题时，出现上述提示，可怎么也找不出问题，程序并未使用递归，数组也没有越界，在本地运行时也没有报错，实则困扰了我很久。后来把原先使用的 char 类型的字符数组改为 string 类型的字符串后解决了该问题。看有大佬说是牛客网无法处理数组索引值较大时的赋值操作，我当时是使用了<code>char s[1000]</code>这样的操作，发生段错误。</p>
+</li>
+<li><p>size() 和 sizeof() 在 string 中的区别<br>size() 函数返回字符串的长度，不包括结束符’\0’。<br>sizeof() 函数返回所占总空间的字节数。用于获得保证能实现容纳所建立的最大对象的字节大小，在编译时进行计算，<strong>故 sizeof() 不能用来返回动态分配的内存空间的大小</strong>。<a id="more"></a><br>改用 string 以后并未及时意识到这个问题，程序中的 <code>sizeof(s)</code>完全没动，提交以后显示有样例未通过，于是自己试了几个，在本地 debug 才发现。顺便我在本地（VS）用的是<code>size(s)</code>这种写法，本地未报错，但在牛客上编译出错，要使用<code>s.size()</code>才行。</p>
+</li>
+</ul>
+<hr>
+<p>最近总是用 python 居多，C/C++ 怎么写几乎忘干净了。偏偏蓝桥杯又报了 C/C++ 的组别，于是多多少少临阵磨枪，能恢复到大一的水平就不错了。对竞赛依旧提不起什么兴趣，但是基本的代码能力总要有，基本的算法也要能应用，光能够答对笔试的理论考察是万万不可的，如果仍要在这条路走下去的话。<br>距离考研还有281天，在家的这段时间效率并不高，甚至前几天还有过要不要跨考放弃计算机的打算。但是我虽然深知自己对这门学科并无热情，但也并不厌恶，更不想白白浪费花在上面的四年时间。也许有一天我终将找到自己喜欢做的事情，那也得是在实现了经济独立的基础上，我不介意再等等。父母在不远游，游必有方。或许前半句是做不到了，但是心总要收回来，做到后半句。</p>
+
+        
+    </section>
+</article>
+
+
+
+<div class="comments">
+    <div id="comments"></div>
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+    new Gitalk({
+        clientID: "13ba7e646c893f6294ab",
+        clientSecret: "c44b3093ffc348641c2c7defa6cfa395578661ca",
+        repo: "Haibarayu.github.io",
+        owner: "Haibarayu",
+        admin: ["Haibarayu"],
+        id: "2020/03/14/简单记录-1",
+        distractionFreeMode: true,
+        title: "简单记录(1)",
+        body: "http://yoursite.com/2020/03/14/简单记录-1/",
+        labels: ["Note"]
+    }).render('comments');
+    </script>
+</div>
+
 </div>
         <footer class="footer">
   <span>Copyright ©2019 Haibarayu</span>
@@ -197,6 +251,11 @@
         }
     });
     </script>
+    
+        <script type="text/javascript" src="/js/scrollspy.min.js"></script>
+        <script type="text/javascript">
+        $(document.body).scrollspy({target: '#aside-inner'});
+        </script>
     
 
 </body>

@@ -118,7 +118,7 @@
             </div>
             
             <br>
-            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="280" height="86" src="//music.163.com/outchain/player?type=2&id=497102&auto=1&height=66"></iframe>
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="280" height="86" src="//music.163.com/outchain/player?type=2&id=475072090&auto=1&height=66"></iframe>
         </div>
         
     </div>
@@ -127,6 +127,51 @@
 </header>
 
         <div id="content" class="content">
+    <article class="article" itemscope itemprop="blogPost">
+    
+    <header class="article-header">
+        
+        <h1 itemprop="name">
+            <a href="/2020/03/14/简单记录-1/">简单记录(1)</a>
+        </h1>
+        
+        <div class="article-meta clearfix">
+            <a class="article-date" href="http://yoursite.com/index.html">
+    
+    <i class="icon-calendar"></i>
+    
+    <time datetime="2020-03-13T16:10:04.000Z" itemprop="datePublished">2020-03-14</time>
+</a>
+
+            
+<div class="article-tag-list">
+    <i class="icon-tag"></i>
+    <a class="article-tag-link" href="/tags/Note/">Note</a>
+</div>
+
+
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
+        
+        <ul>
+<li><p>牛客“程序发生段错误，可能是数组越界，堆栈溢出（如递归调用层数太多）”错误的可能原因<br><strong>开辟数组空间过大。</strong><br>今天在做一道并不难的题时，出现上述提示，可怎么也找不出问题，程序并未使用递归，数组也没有越界，在本地运行时也没有报错，实则困扰了我很久。后来把原先使用的 char 类型的字符数组改为 string 类型的字符串后解决了该问题。看有大佬说是牛客网无法处理数组索引值较大时的赋值操作，我当时是使用了<code>char s[1000]</code>这样的操作，发生段错误。</p>
+</li>
+<li><p>size() 和 sizeof() 在 string 中的区别<br>size() 函数返回字符串的长度，不包括结束符’\0’。<br>sizeof() 函数返回所占总空间的字节数。用于获得保证能实现容纳所建立的最大对象的字节大小，在编译时进行计算，<strong>故 sizeof() 不能用来返回动态分配的内存空间的大小</strong>。
+        
+        </p><p class="article-more-link">
+            <a href="/2020/03/14/简单记录-1/#more">
+                <span class="vm">阅读更多</span>
+                <i class="icon-arrow-double-right vm"></i>    
+            </a>
+        </p>
+        
+        
+    </li></ul></section>
+</article>
+
+
     <article class="article" itemscope itemprop="blogPost">
     
     <header class="article-header">
