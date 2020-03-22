@@ -7,11 +7,11 @@
 
     
 
-    <title>Haibarayu&#39;s Blog</title>
+    <title>【蓝桥杯】第十一届软件类校内模拟赛——C/C++程序设计 | Haibarayu&#39;s Blog</title>
     <meta name="author" content="Wu Yu">
     <meta name="version" content="1.0.0">
     <meta name="keywords" content>
-    <meta name="description" content>
+    <meta name="description" content="1. 约数问题描述　　1200000有多少个约数（只计算正约数）。答案提交　　这是一道结果填空的题，你只需要算出结果后提交即可。本题的结果为一个整数，在提交答案时只填写这个整数，填写多余的内容将无法得分。分析　　如果一个数的开方之前存在一个数能被它整除，那么开方之后也一定存在一个数可以被整除。如10可以被1整除，则其商10也一定为其约数；同时10可以被2整除，而其商5一定也为其约数……故计算时，只计算1到其开方的约数个数，乘2即为结果。结果962. 存储单位问题描述　　在计算机存储中，...">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 
@@ -37,7 +37,7 @@
 
     <nav id="nav-inner" class="nav-inner">
         
-            <a class="nav-item active" href="/">
+            <a class="nav-item" href="/">
                 <span class="nav-text">首页</span>
             </a>
         
@@ -69,6 +69,8 @@
     <div id="aside-inner" class="aside-inner">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
 
+        
+        
         
         
 
@@ -126,17 +128,16 @@
 
 </header>
 
-        <div id="content" class="content">
-    <article class="article" itemscope itemprop="blogPost">
+        <div id="content" class="content"><article class="article" itemscope itemprop="blogPost">
     
     <header class="article-header">
         
         <h1 itemprop="name">
-            <a href="/2020/03/22/【蓝桥杯】第十一届软件类校内模拟赛/">【蓝桥杯】第十一届软件类校内模拟赛——C/C++程序设计</a>
+            【蓝桥杯】第十一届软件类校内模拟赛——C/C++程序设计
         </h1>
         
         <div class="article-meta clearfix">
-            <a class="article-date" href="http://yoursite.com/index.html">
+            <a class="article-date" href="http://yoursite.com/2020/03/22/【蓝桥杯】第十一届软件类校内模拟赛/index.html">
     
     <i class="icon-calendar"></i>
     
@@ -192,221 +193,25 @@
 </article>
 
 
-    <article class="article" itemscope itemprop="blogPost">
-    
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/2020/03/14/简单记录-1/">简单记录(1)</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="http://yoursite.com/index.html">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2020-03-13T16:10:04.000Z" itemprop="datePublished">2020-03-14</time>
-</a>
 
-            
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/Note/">Note</a>
+<div class="comments">
+    <div id="comments"></div>
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+    new Gitalk({
+        clientID: "13ba7e646c893f6294ab",
+        clientSecret: "c44b3093ffc348641c2c7defa6cfa395578661ca",
+        repo: "Haibarayu.github.io",
+        owner: "Haibarayu",
+        admin: ["Haibarayu"],
+        id: "2020/03/22/【蓝桥杯】第十一届软件类校内模拟赛",
+        distractionFreeMode: true,
+        title: "【蓝桥杯】第十一届软件类校内模拟赛——C/C++程序设计",
+        body: "http://yoursite.com/2020/03/22/【蓝桥杯】第十一届软件类校内模拟赛/",
+        labels: ["蓝桥","C/C++"]
+    }).render('comments');
+    </script>
 </div>
-
-
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <ul>
-<li><p>牛客“程序发生段错误，可能是数组越界，堆栈溢出（如递归调用层数太多）”错误的可能原因<br><strong>开辟数组空间过大。</strong><br>今天在做一道并不难的题时，出现上述提示，可怎么也找不出问题，程序并未使用递归，数组也没有越界，在本地运行时也没有报错，实则困扰了我很久。后来把原先使用的 char 类型的字符数组改为 string 类型的字符串后解决了该问题。看有大佬说是牛客网无法处理数组索引值较大时的赋值操作，我当时是使用了<code>char s[1000]</code>这样的操作，发生段错误。</p>
-</li>
-<li><p>size() 和 sizeof() 在 string 中的区别<br>size() 函数返回字符串的长度，不包括结束符’\0’。<br>sizeof() 函数返回所占总空间的字节数。用于获得保证能实现容纳所建立的最大对象的字节大小，在编译时进行计算，<strong>故 sizeof() 不能用来返回动态分配的内存空间的大小</strong>。
-        
-        </p><p class="article-more-link">
-            <a href="/2020/03/14/简单记录-1/#more">
-                <span class="vm">阅读更多</span>
-                <i class="icon-arrow-double-right vm"></i>    
-            </a>
-        </p>
-        
-        
-    </li></ul></section>
-</article>
-
-
-    <article class="article" itemscope itemprop="blogPost">
-    
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/2019/09/22/用RNN写诗/">用RNN写诗-运行中的问题总结</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="http://yoursite.com/index.html">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2019-09-22T13:30:43.000Z" itemprop="datePublished">2019-09-22</time>
-</a>
-
-            
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/NLP/">NLP</a>
-</div>
-
-
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <p>基于 pytorch 的古诗自动生成模型<br><a href="https://github.com/chenyuntc/pytorch-book/tree/master/chapter9-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%86%99%E8%AF%97(CharRNN)" target="_blank" rel="noopener">https://github.com/chenyuntc/pytorch-book/tree/master/chapter9-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%86%99%E8%AF%97(CharRNN)</a><br>作者写得很清楚，包括环境配置和命令。奈何我还是太菜，在运行的时候遇到了各种各样的问题，走了很多弯路，所以在此总结记录一下。
-        
-        </p><p class="article-more-link">
-            <a href="/2019/09/22/用RNN写诗/#more">
-                <span class="vm">阅读更多</span>
-                <i class="icon-arrow-double-right vm"></i>    
-            </a>
-        </p>
-        
-        
-    </section>
-</article>
-
-
-    <article class="article" itemscope itemprop="blogPost">
-    
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/2019/08/26/如果来生我是一只猫/">如果来生我是一只猫(1)</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="http://yoursite.com/index.html">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2019-08-26T12:28:52.000Z" itemprop="datePublished">2019-08-26</time>
-</a>
-
-            
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/如果来生系列/">如果来生系列</a>, <a class="article-tag-link" href="/tags/文段/">文段</a>
-</div>
-
-
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <p>文/莺鸽海<br><br><font size="3">如果来生我是一只猫，<br>我希望住在一座海边的小房子里。<br>无风的时候找一块温度合适的石头，<br>趴在上面晒上一下午的太阳。<br>有风的时候，<br>风会把鱼的香味儿送过来，<br>好让我贪婪地呼吸美好的空气。
-        
-        <p class="article-more-link">
-            <a href="/2019/08/26/如果来生我是一只猫/#more">
-                <span class="vm">阅读更多</span>
-                <i class="icon-arrow-double-right vm"></i>    
-            </a>
-        </p>
-        
-        
-    </font></p></section>
-</article>
-
-
-    <article class="article" itemscope itemprop="blogPost">
-    
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/2019/08/20/关于《非自然死亡》/">关于《非自然死亡》——今でもあなたは私の光</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="http://yoursite.com/index.html">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2019-08-20T11:46:32.000Z" itemprop="datePublished">2019-08-20</time>
-</a>
-
-            
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/剧评/">剧评</a>
-</div>
-
-
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <p>文/莺鸽海<br><br><font size="3">　　在此之前，我没有听懂《Lemon》这首歌。<br>　　刚刚看完非自然死亡，心中有很多东西在涌动。神仓所长说，没有值不值得死的人，而我们，也只是碰巧活着。碰巧活着的我们，决不能将死当做不吉利的事。死亡对我来说曾经是一个遥远的词语，当生活在城市里时尤其如此。我第一次意识到，死亡其实离我们并不远是在读高中的时候，那个时候我刚从北京回到老家，一个地处偏远的小县城，还保留了些许传统的风俗。嫡亲的叔伯们往往都住在一起，而祖坟就在身后的山坡上。在这样一个不大的地方，有人过世时很快就会被人知晓。夜晚，葬歌和丧鼓就在不远的地方久久地回荡，而我独自一人躺在空旷的房间里伴着这歌声入睡。这几乎是很平常也很频繁的事情，也是我之前从未体会过的感情。
-        
-        <p class="article-more-link">
-            <a href="/2019/08/20/关于《非自然死亡》/#more">
-                <span class="vm">阅读更多</span>
-                <i class="icon-arrow-double-right vm"></i>    
-            </a>
-        </p>
-        
-        
-    </font></p></section>
-</article>
-
-
-    <article class="article" itemscope itemprop="blogPost">
-    
-    <header class="article-header">
-        
-        <h1 itemprop="name">
-            <a href="/2019/07/19/楔子/">楔子</a>
-        </h1>
-        
-        <div class="article-meta clearfix">
-            <a class="article-date" href="http://yoursite.com/index.html">
-    
-    <i class="icon-calendar"></i>
-    
-    <time datetime="2019-07-19T05:34:05.000Z" itemprop="datePublished">2019-07-19</time>
-</a>
-
-            
-<div class="article-tag-list">
-    <i class="icon-tag"></i>
-    <a class="article-tag-link" href="/tags/文段/">文段</a>
-</div>
-
-
-        </div>
-    </header>
-    
-    <section class="article-body markdown-body">
-        
-        <p>文/莺鸽海<br><br>前言：<br>　　这是一个在我心底埋藏了很久的故事，或者说是一个场景。这个故事里有缓缓的波涛，有连绵不绝的雨水，有可以震撼人心的雷鸣，也有落日。星玫说，夕阳是你一定能等到的奇迹，于是我便沉伦在这奇迹里不能自拔。但我一直以来憧憬着的，仍是莺歌海的落日。16年年初的时候，我第一次从三叔的笔下得知这个地名，一个地处海南边缘的小小的渔镇。它构成了我心中的念想，催生了这个故事。我或许能把它写出来，也或许不能。但无论如何，有生之年我都要去到一次莺歌海，如此也已经足够了。<br>　　这是一段小小的楔子，虽然只有几百字，我也曾经反复修改过很多次，希望可以把我心中的景色传达给你。以后有写好的部分我也会放在这里，希望故事和我都能有所成长。
-        
-        </p><p class="article-more-link">
-            <a href="/2019/07/19/楔子/#more">
-                <span class="vm">阅读更多</span>
-                <i class="icon-arrow-double-right vm"></i>    
-            </a>
-        </p>
-        
-        
-    </section>
-</article>
-
-
-
-
 
 </div>
         <footer class="footer">
@@ -469,6 +274,11 @@
         }
     });
     </script>
+    
+        <script type="text/javascript" src="/js/scrollspy.min.js"></script>
+        <script type="text/javascript">
+        $(document.body).scrollspy({target: '#aside-inner'});
+        </script>
     
 
 </body>
