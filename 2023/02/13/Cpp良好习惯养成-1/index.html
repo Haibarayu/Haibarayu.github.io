@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+
+    
+
+    
+
+    <title>C++ 良好习惯养成（1）——头文件 | Haibarayu&#39;s Blog</title>
+    <meta name="author" content="Wu Yu">
+    <meta name="version" content="1.0.0">
+    <meta name="keywords" content>
+    <meta name="description" content="头文件的 #include 顺序配对的头文件项目中的其他头文件第三方库中的头文件标准库头文件创建和使用头文件的其他建议始终包含 header guards。不要在头文件中定义变量和函数（全局常量除外）。将头文件命名为与其关联的源代码文件相同的名称。每个头文件应该有一个特定的工作，并且尽可能独立。显示包含代码文件中使用的功能需要的头文件。编写的每个头文件都应该 #include 它需要的每个依赖（都能够自行编译）。仅 #include 需要的内容。不要 #incl...">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+    
+    <link rel="alternate" href="/atom.xml" title="Haibarayu&#39;s Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/images/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <main class="app">
+        <header class="header clearfix">
+    <div id="nav" class="nav">
+    <div class="nav-mobile">
+        <button id="open-panel" class="open-panel nav-mobile-item"><i class="icon-documents"></i></button>
+        <h1 class="nav-mobile-title nav-mobile-item">Haibarayu&#39;s Blog</h1>
+        <button id="open-menus" class="open-panel nav-mobile-item"><i class="icon-library"></i></button>
+    </div>
+
+    <nav id="nav-inner" class="nav-inner">
+        
+            <a class="nav-item" href="/">
+                <span class="nav-text">首页</span>
+            </a>
+        
+            <a class="nav-item" href="/categories/morning">
+                <span class="nav-text">清晨</span>
+            </a>
+        
+            <a class="nav-item" href="/categories/universe">
+                <span class="nav-text">宇宙</span>
+            </a>
+        
+            <a class="nav-item" href="/tags">
+                <span class="nav-text">标签</span>
+            </a>
+        
+            <a class="nav-item" href="/archives">
+                <span class="nav-text">归档</span>
+            </a>
+        
+            <a class="nav-item" href="/about">
+                <span class="nav-text">关于</span>
+            </a>
+        
+    </nav>
+</div>
+
+    <aside id="aside" class="aside">
+    <div id="aside-mask" class="aside-mask"></div>
+    <div id="aside-inner" class="aside-inner">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+
+        
+        
+        
+        
+
+        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#头文件的-include-顺序"><span class="toc-number">1.</span> <span class="toc-text">头文件的 #include 顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建和使用头文件的其他建议"><span class="toc-number">2.</span> <span class="toc-text">创建和使用头文件的其他建议</span></a></li></ol>
+        
+    </div>
+</aside>
+
+</header>
+
+        <div id="content" class="content"><article class="article" itemscope itemprop="blogPost">
+    
+    <header class="article-header">
+        
+        <h1 itemprop="name">
+            C++ 良好习惯养成（1）——头文件
+        </h1>
+        
+        <div class="article-meta clearfix">
+            <a class="article-date" href="http://yoursite.com/2023/02/13/Cpp良好习惯养成-1/index.html">
+    
+    <i class="icon-calendar"></i>
+    
+    <time datetime="2023-02-13T11:36:41.000Z" itemprop="datePublished">2023-02-13</time>
+</a>
+
+            
+<div class="article-tag-list">
+    <i class="icon-tag"></i>
+    <a class="article-tag-link" href="/tags/C/">C++</a>
+</div>
+
+
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
+        
+        <h2 id="头文件的-include-顺序"><a href="#头文件的-include-顺序" class="headerlink" title="头文件的 #include 顺序"></a>头文件的 #include 顺序</h2><ol>
+<li>配对的头文件</li>
+<li>项目中的其他头文件</li>
+<li>第三方库中的头文件</li>
+<li>标准库头文件</li>
+</ol>
+<h2 id="创建和使用头文件的其他建议"><a href="#创建和使用头文件的其他建议" class="headerlink" title="创建和使用头文件的其他建议"></a>创建和使用头文件的其他建议</h2><ul>
+<li>始终包含 header guards。</li>
+<li>不要在头文件中定义变量和函数（全局常量除外）。</li>
+<li>将头文件命名为与其关联的源代码文件相同的名称。</li>
+<li>每个头文件应该有一个特定的工作，并且尽可能独立。</li>
+<li>显示包含代码文件中使用的功能需要的头文件。</li>
+<li>编写的每个头文件都应该 #include 它需要的每个依赖（都能够自行编译）。</li>
+<li>仅 #include 需要的内容。</li>
+<li>不要 #include .cpp 文件。<a id="more"></a>
+</li>
+</ul>
+<hr>
+<p>参考资料：<br><a href="https://www.learncpp.com/cpp-tutorial/header-files/" target="_blank" rel="noopener">https://www.learncpp.com/cpp-tutorial/header-files/</a></p>
+
+        
+    </section>
+</article>
+
+
+
+<div class="comments">
+    <div id="comments"></div>
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+    new Gitalk({
+        clientID: "13ba7e646c893f6294ab",
+        clientSecret: "c44b3093ffc348641c2c7defa6cfa395578661ca",
+        repo: "Haibarayu.github.io",
+        owner: "Haibarayu",
+        admin: ["Haibarayu"],
+        id: "2023/02/13/Cpp良好习惯养成-1",
+        distractionFreeMode: true,
+        title: "C++ 良好习惯养成（1）——头文件",
+        body: "http://yoursite.com/2023/02/13/Cpp良好习惯养成-1/",
+        labels: ["C++"]
+    }).render('comments');
+    </script>
+</div>
+
+</div>
+        <footer class="footer">
+  <span>Copyright ©2022 Haibarayu</span>
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a>
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?8d7c5caba03db52468d209cd95ff3314";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    
+</footer>
+
+    </main>
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var nodes = {
+            nav: $('#nav'),
+            aside: $('#aside'),
+            asideInner: $('#aside-inner'),
+            navInner: $('#nav-inner')
+        };
+
+        var doing = false;
+        nodes.asideInner.on('webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend', function() {
+            if (nodes.aside.hasClass('mobile-open')) {
+                nodes.aside.removeClass('mobile-open');
+            } else {
+                nodes.aside.removeClass('mobile-close panel-show');
+            }
+            doing = false;
+        });
+        $('#open-panel, #aside-mask').on('click', function() {
+            if (doing) {
+                return;
+            }
+            
+            if (nodes.aside.hasClass('panel-show')) {
+                nodes.aside.addClass('mobile-close');
+            } else {
+                nodes.aside.addClass('mobile-open panel-show');
+            }
+        });
+        $('#open-menus').on('click', function() {
+            nodes.navInner.slideToggle();
+        });
+
+        if (window.innerWidth <= 960) {
+            setTimeout(function() {
+                nodes.navInner.slideUp();
+            }, 3000);
+        }
+    });
+    </script>
+    
+        <script type="text/javascript" src="/js/scrollspy.min.js"></script>
+        <script type="text/javascript">
+        $(document.body).scrollspy({target: '#aside-inner'});
+        </script>
+    
+
+</body>
+</html>
